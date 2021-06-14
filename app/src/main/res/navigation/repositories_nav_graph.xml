@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/repositoryFragment"
     android:id="@+id/repositories_nav_graph">
+
+    <fragment
+        android:id="@+id/repositoryFragment"
+        android:name="com.ronivaldoroner.repositories.ui.features.repository.RepositoryFragment"
+        android:label="RepositoryFragment"
+        tools:layout="@layout/repository_fragment"
+        >
+
+        <action
+            android:id="@+id/action_to_repositoryFragment"
+            app:destination="@id/repositoryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+
+    </fragment>
 
 </navigation>

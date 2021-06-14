@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ronivaldoroner.repositories.ui.features.repository.RepositoryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ronivaldoroner.repositories.ui.commons.components.WidgetToolbar
+            android:id="@+id/wtRepositories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:leftIcon="@android:drawable/ic_menu_revert"
+            app:title="Repository"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:title="Repository"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
