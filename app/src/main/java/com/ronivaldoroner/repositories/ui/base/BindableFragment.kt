@@ -1,4 +1,4 @@
-package com.ronivaldoroner.repositories.ui.commons.base
+package com.ronivaldoroner.repositories.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

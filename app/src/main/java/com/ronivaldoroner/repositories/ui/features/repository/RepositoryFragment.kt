@@ -3,7 +3,7 @@ package com.ronivaldoroner.repositories.ui.features.repository
 import android.widget.Toast
 import com.ronivaldoroner.repositories.R
 import com.ronivaldoroner.repositories.databinding.RepositoryFragmentBinding
-import com.ronivaldoroner.repositories.ui.commons.base.BindableFragment
+import com.ronivaldoroner.repositories.ui.base.BindableFragment
 import com.ronivaldoroner.repositories.ui.commons.extensions.observe
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,11 +27,8 @@ class RepositoryFragment : BindableFragment<RepositoryFragmentBinding>() {
 
     private fun initObservables() {
         with(viewModel) {
-            observe(screenState){
-                // TODO()
-            }
-            observe(screenData) {
-                // TODO("Update Adapter")
+            observe(repositories) {
+
             }
         }
     }

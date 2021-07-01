@@ -14,17 +14,9 @@ class GitHubRemoteProvider(private val gitHubApi: GitHubApi) : GitHubProvider {
 
     override suspend fun getRepositories(
         params: RepositoryRequestParams,
-        callback: ResultCallback<RepositoryModel>
-    ) = try {
-
-        val result = gitHubApi.getRepositoriesByLanguage(
-            language = params.language.joinToString(prefix = "language:", separator = "+language:"),
-            sort = params.sort,
-            page = params.page
-        )
-
-        callback.onSuccess(result)
-    } catch (ex: Throwable) {
-        callback.onError(ex.mapRemoteErrors())
-    }
+    ) = gitHubApi.getRepositoriesByLanguage(
+        language = params.language.joinToString(prefix = "language:", separator = "+language:"),
+        sort = params.sort,
+        page = params.page
+    )
 }

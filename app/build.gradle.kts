@@ -1,8 +1,9 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-    kotlin("android.extensions")
+    id(Dependency.Plugins.application)
+    kotlin(Dependency.Plugins.android)
+    kotlin(Dependency.Plugins.kapt)
+    kotlin(Dependency.Plugins.kotlinExtensions)
+    id("kotlin-android")
 }
 
 android {
@@ -44,6 +45,10 @@ dependencies {
     implementation(Dependency.kotlin)
     implementation(Dependency.coreKtx)
     implementation(Dependency.appCompat)
+    implementation(Dependency.lifecycleViewModel)
+    implementation(Dependency.lifecycleLiveData)
+    implementation(Dependency.coroutinesAndroid)
+    implementation(Dependency.coroutinesCore)
     implementation(Dependency.material)
     implementation(Dependency.constraintLayout)
     implementation(Dependency.navigationFragment)
@@ -64,6 +69,8 @@ dependencies {
 
     //Glide
     implementation(Dependency.glide)
+    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     annotationProcessor(Dependency.glideCompile)
 
     testImplementation("junit:junit:4.13.2")
